@@ -1,4 +1,4 @@
-# refer_us_to_your_friends
+# refer us to your friends
 
 ## File descriptions
 ### /src/main.js
