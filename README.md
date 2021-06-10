@@ -1,5 +1,15 @@
 # refer_us_to_your_friends
 
+## File descriptions
+### /src/main.js
+The main JavaScript file used to set up vue and init vue instances.
+
+### /views/Home.vue
+This file is a page of the web. 
+
+### /components/buttonShare.vue
+This file is a component for social media share button. The file contains the HTML for creating buttons, CSS for styling and Javascript for controlling buttons and share to Line and Facebook and Email
+
 ## Project setup
 ```
 yarn install
