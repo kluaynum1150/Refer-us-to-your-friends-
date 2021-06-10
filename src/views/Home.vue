@@ -3,6 +3,7 @@
     <b-container class="body-box" style="width: 90%; height: 40em">
       <center><img src="../assets/logo_megaphone.png" class="image"></center>
       <h2 style="padding: 10px">Refer us to your friends!</h2>
+      <!-- text inputs and clipboard button -->
       <center>
         <b-input-group class="input-link">
           <b-form-input v-model="url" disabled></b-form-input>
@@ -17,6 +18,7 @@
           </b-input-group-append>
         </b-input-group>
       </center>
+      <!-- Show share button -->
       <ShareButton v-bind:link="url" />
     </b-container>
   </div>
@@ -36,6 +38,7 @@ export default {
     };
   },
   methods: {
+    // Function for copy link in text inputs
     async copy(link) {
       this.tooltipText = "Copied!"
       await navigator.clipboard.writeText(link);

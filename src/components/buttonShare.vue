@@ -2,6 +2,7 @@
   <b-container>
     <b-row>
       <b-col class="button-left" cols="12" sm="6">
+        <!-- share buttin on Facebook -->
         <b-button
           pill
           size="lg"
@@ -14,6 +15,7 @@
         </b-button>
       </b-col>
       <b-col class="button-right" cols="12" sm="6">
+        <!-- share buttin on Facebook Messenger -->
         <b-button
           pill 
           style="background:#00c6ff;" 
@@ -26,6 +28,7 @@
         </b-button>
       </b-col>
       <b-col class="button-left" cols="12" sm="6">
+        <!-- share buttin on Line -->
         <b-button
           pill
           size="lg"
@@ -34,12 +37,12 @@
           onclick="window.open(this.href, 'facebook-share','width=auto,height=auto');return false;"
           class="mb-2 text-in-button"
         >
-          <!-- <b-icon-link aria-label="Help"></b-icon-link> -->
           <i class="lab la-line"></i>
           Share as Line
         </b-button>
       </b-col>
       <b-col class="button-right" cols="12" sm="6">
+        <!-- share buttin on Email -->
         <b-button
           pill
           size="lg"
@@ -60,10 +63,11 @@ export default {
   props: ["link"],
   data() {
     return {
-      pageUrl: this.link,
+      pageUrl: this.link, //link for share
     };
   },
   methods: {
+    // Function for share link in Facebook Messenger
     shareMessenger() {
       FB.ui({
         method: "send",
@@ -71,6 +75,7 @@ export default {
         link: this.pageUrl,
       });
     },
+    // Function for share link in Facebook feed
     shareFacebook() {
       FB.ui(
         {
@@ -81,6 +86,7 @@ export default {
         function () {}
       );
     },
+    // Function for share link in Line
     shareLine(href){
       window.open(href, 'line-share', 'width=auto,height=auto')
       return false

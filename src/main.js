@@ -7,15 +7,12 @@ import { BootstrapVue, IconsPlugin, VBTooltipPlugin } from 'bootstrap-vue'
 // Import Bootstrap an BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import VueSocialSharing from 'vue-social-sharing'
 
-Vue.use(VueSocialSharing);
-
-// Make BootstrapVue available throughout your project
+// Make BootstrapVue available throughout project
 Vue.use(BootstrapVue)
-// Optionally install the BootstrapVue icon components plugin
+// install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
-
+// install the BootstrapVue Tooltip components plugin
 Vue.use(VBTooltipPlugin)
 
 Vue.config.productionTip = false
